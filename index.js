@@ -53,9 +53,9 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply('no');
     } else if (commandName === 'flood') {
         let pin = message; // Create variable for pin
-        let botAmount = args[1] || 100; // Create variable for bot amount and set default to 50
+        let botAmount = args[1] || 50; // Create variable for bot amount and set default to 50
         if (!args.length || !args[0].match(/^[0-9]+$/)) return interaction.reply('You need to provide a valid kahoot pin!'); // Check kahoot pin requirements
-        if (botAmount > 100) return interaction.reply('You can only send maximum of 500 bots!') // Handle bot amounts too large
+        if (botAmount > 50) return interaction.reply('You can only send maximum of 500 bots!') // Handle bot amounts too large
         const embed = new Discord.MessageEmbed()
             .setTitle("Bot status")
             .setAuthor(`Sending bots to ${pin}`, "https://cdn.discordapp.com/avatars/902146418301599774/2006058bf95981db30d94f47e552bbaa.webp?size=128")
@@ -65,7 +65,7 @@ client.on('interactionCreate', async interaction => {
             .setTimestamp()
         await interaction.channel.send({ embeds: [embed] })
         await interaction.reply('Sending bots!')
-        for(var i=0; i<botAmount;i++){setTimeout(function(){floodgame(pin)},i*150)}
+        for(var i=0; i<botAmount;i++){setTimeout(function(){floodgame(pin)},i*300)}
     }
 });
 
