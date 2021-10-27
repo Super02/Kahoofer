@@ -1,0 +1,16 @@
+{
+  "name": "kahoot.js-updated-fixed",
+  "version": "1.0.0",
+  "description": "Kahoot.js is a library to interact with the Kahoot API. kahoot.js supports joining and interacting with quizzes and challenges. **Installation requires Node.js 10.9.0 or higher.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kahoot",
+    "kahoot.js",
+    "kahoot client"
+  ],
+  "author": "",
+  "license": "MIT"
+}
