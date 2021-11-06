@@ -6,7 +6,9 @@ require('dotenv').config();
 
 const commands = [
         new SlashCommandBuilder().setName('flood').setDescription('Floods the kahoot!').addStringOption((option) =>
-            option.setName("pin").setDescription("Game pin for kahoot game")),
+            option.setName("pin").setDescription("Game pin for kahoot game")).addIntegerOption((option) =>
+            option.setName("amount").setDescription("How many bots you want to join")).addStringOption((option) =>
+            option.setName("name").setDescription("Name for the bots followed by a number")),
         new SlashCommandBuilder().setName('help').setDescription('Shows the help menu'),
         new SlashCommandBuilder().setName('ping').setDescription('Shows ping information'),
     ]
